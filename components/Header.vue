@@ -1,8 +1,8 @@
 <template>
-  <section class="header">
+  <header class="header">
     <div class="header__wrapper">
-      <div class="header__log">
-        <h1>vue app</h1>
+      <div class="header__logo-wrapper">
+        <img class="header__logo" src="favicon.ico" alt="site logo" />
       </div>
       <div class="header__link-wrapper">
         <NuxtLink class="header__link" to="/">Home</NuxtLink>
@@ -11,26 +11,10 @@
         <NuxtLink class="header__link" to="/about">Login</NuxtLink>
       </div>
     </div>
-  </section>
+  </header>
 </template>
 <script>
 export default {
   name: "Header",
 };
 </script>
-<style>
-.header__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header__link-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.header__link {
-  font-size: 16px;
-  text-decoration: none;
-}
-</style>

@@ -1,0 +1,129 @@
+.card {
+  border: 1px solid rgb(238, 238, 238);
+  overflow-x: hidden;
+  cursor: pointer;
+  position: relative;
+  &__top-sell {
+    position: absolute;
+    top: rem(12px);
+    left: rem(12px);
+    font-size: rem(15px);
+    font-weight: 500;
+    padding: rem(5px) rem(7px);
+    color: #fff;
+    background-color: #d72a4e;
+    border-top-right-radius: rem(7px);
+    border-bottom-right-radius: rem(7px);
+    z-index: 9;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    padding: rem(8px) rem(4px);
+    height: 100%;
+    width: 100%;
+    @include mq(double-extra-large) {
+      padding: rem(12px);
+    }
+  }
+  &__image-wrapper {
+    width: 100%;
+    height: rem(150px);
+    @include mq(medium) {
+      height: rem(230px);
+    }
+    @include mq(double-extra-large) {
+      height: rem(248px);
+    }
+  }
+  &__image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    @include mq(medium) {
+      &:hover {
+        transform: scale(0.98);
+        transition: all 0.2s ease;
+        background-color: rgba(1, 17, 51, 0.10980392156862745);
+      }
+    }
+  }
+  &__contents {
+    margin: auto 0;
+  }
+  &__text-wrapper {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(8px);
+    &--mobile {
+      flex-direction: column;
+    }
+  }
+  &__contents-heading {
+    font-size: rem(15px);
+    font-weight: 500;
+    color: #000;
+    max-height: rem(22px);
+    overflow: hidden;
+  }
+  &__contents-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(3px);
+  }
+  &__contents-price {
+    font-size: rem(15px);
+    font-weight: 700;
+    color: #002c36;
+    @include mq(801px) {
+      font-size: rem(12px);
+      font-weight: 600;
+    }
+    &--previous {
+      position: relative;
+      width: max-content;
+      &::before {
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #d72a4e;
+      }
+    }
+  }
+  &__current-price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(4px);
+    margin-top: rem(4px);
+  }
+  &__current-price {
+    font-size: rem(15px);
+    font-weight: 700;
+    color: #002c36;
+    @include mq(801px) {
+      font-size: rem(12px);
+    }
+  }
+  &__contents-percent {
+    font-size: rem(13px);
+    font-weight: 500;
+    padding: rem(2px) rem(4px);
+    border-radius: rem(4px);
+    background-color: #d72a4e;
+    color: #fff;
+  }
+  &__contents-sold {
+    font-size: rem(13px);
+    font-weight: 500;
+    margin-top: auto;
+    @include mq(801px) {
+      font-size: rem(12px);
+      font-weight: 400;
+    }
+  }
+}

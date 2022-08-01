@@ -1,0 +1,80 @@
+.hero {
+  &__wrapper {
+    box-shadow: 4px 11px 5px 0px rgba(207, 199, 199, 0.44);
+    -webkit-box-shadow: 4px 11px 5px 0px rgba(207, 199, 199, 0.44);
+    -moz-box-shadow: 4px 11px 5px 0px rgba(207, 199, 199, 0.44);
+    @include mq(1401px) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: rem(15px);
+    }
+  }
+  &__banner {
+    @include mq(1401px) {
+      grid-column: 1 / 9;
+    }
+    overflow: hidden;
+    position: relative;
+  }
+  &__Story {
+    @include mq(1400px) {
+      grid-column: 9 / -1;
+    }
+    overflow: hidden;
+  }
+  &__banner-wrapper {
+    display: flex;
+  }
+  &__Story-image-wrapper {
+    height: 100%;
+    @include mq(medium) {
+      flex: 0 0 100% !important;
+    }
+  }
+  &__banner-image-wrapper {
+    height: rem(250px) !important;
+    @include mq(medium) {
+      flex: 0 0 100%;
+    }
+    @include mq(medium-large) {
+      height: rem(320px) !important;
+    }
+    @include mq(double-extra-large) {
+      height: rem(450px) !important;
+    }
+  }
+  &__banner-image {
+    height: 100%;
+    width: 100%;
+  }
+  &__Story-wrapper {
+    display: flex;
+    height: rem(250px);
+    @include mq(medium) {
+      flex: 0 0 100%;
+    }
+    @include mq(medium-large) {
+      height: rem(320px);
+    }
+    @include mq(double-extra-large) {
+      height: rem(450px);
+    }
+  }
+  &__banner-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    cursor: pointer;
+    left: 0;
+    height: 100%;
+    color: rgba(#002c36, 0.8);
+    &--right {
+      left: auto;
+      right: 0;
+    }
+    &:hover {
+      background-color: rgba(#dcdceabc, 0.4);
+    }
+  }
+}

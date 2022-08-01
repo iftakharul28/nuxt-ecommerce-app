@@ -1,0 +1,29 @@
+.popular-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: rem(15px) rem(15px);
+
+  margin: rem(15px) 0;
+  @include mq(medium-small) {
+    margin: rem(20px) 0;
+  }
+
+  &__text {
+    font-size: rem(22px);
+    font-weight: 600;
+    color: #002c36;
+    padding-left: rem(12px);
+    text-transform: capitalize;
+    @include mq(medium-small) {
+      max-width: calc(100% - 30px);
+    }
+    @include mq(tripple-extra-large) {
+      max-width: calc(100% - 50px);
+    }
+  }
+  &__icon {
+    color: #002c36;
+  }
+}

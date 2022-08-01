@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/// Returns URL to an image based on its path
+/// @param {String} $path - image path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function image($path, $base: $base-url) {
+  @return asset($base, "images/", $path);
+}
+
+/// Returns URL to a font based on its path
+/// @param {String} $path - font path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function font($path, $base: $base-url) {
+  @return asset($base, "fonts/", $path);
+}
+
+/// px to em convertion function
+$browser-context: 16px; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return calc($pixels/$context * 1rem);
+}
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/**
+     * Main content containers
+     * 1. Make the container full-width with a maximum width
+     * 2. Center it in the viewport
+     * 3. Leave some space on the edges, especially valuable on small screens
+     */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(100% - 40px);
+  @include mq(medium-small) {
+    max-width: calc(100% - 30px);
+  }
+  @include mq(tripple-extra-large) {
+    max-width: calc(100% - 50px);
+  }
+}
+
+/**
+     * Hide text while making it readable for screen readers
+     * 1. Needed in WebKit-based browsers because of an implementation bug;
+     *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+     */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+     * Hide element while making it readable for screen readers
+     * Shamelessly borrowed from HTML5Boilerplate:
+     * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+     */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

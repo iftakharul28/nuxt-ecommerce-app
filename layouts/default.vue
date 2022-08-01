@@ -1,6 +1,14 @@
 <template>
-  <div>
+  <main class="main">
     <Header />
+    <SideBar />
     <Nuxt />
-  </div>
+    <Footer />
+  </main>
 </template>
+
+<script>
+export default {
+  props: ["default"],
+};
+</script>

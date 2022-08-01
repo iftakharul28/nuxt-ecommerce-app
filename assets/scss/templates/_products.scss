@@ -1,0 +1,97 @@
+.products {
+  &__text-wrapper {
+    background-color: #fff;
+    padding: rem(20px) rem(12px) rem(10px);
+    margin-bottom: rem(15px);
+    @include mq(801px) {
+      margin-bottom: rem(20px);
+      padding: rem(15px) rem(15px) rem(10px);
+    }
+  }
+  &__heading {
+    font-size: rem(25px);
+    font-weight: 600;
+    color: #002c36;
+    text-transform: capitalize;
+    @include mq(medium-small) {
+      max-width: calc(100% - 30px);
+    }
+    @include mq(tripple-extra-large) {
+      max-width: calc(100% - 50px);
+    }
+  }
+  &__subheading {
+    font-size: rem(14px);
+    font-weight: 600;
+    margin: rem(10px) 0 rem(15px);
+    text-transform: uppercase;
+    color: #002c36;
+    &--span {
+      color: #d72a4e;
+    }
+  }
+  &__card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fff;
+    padding: rem(20px) rem(12px);
+    @include mq(801px) {
+      grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+      padding: rem(30px) rem(15px) rem(45px);
+    }
+  }
+  &__search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
+    margin-bottom: rem(15px);
+    overflow: hidden;
+  }
+  &__search-main {
+    padding: rem(6px) rem(20px);
+    border-radius: rem(20px);
+    border: 1px solid #d72a4e;
+    cursor: pointer;
+    flex-shrink: initial !important;
+    width: max-content !important;
+    text-align: center;
+  }
+  &__search {
+    color: #002c36;
+    font-size: rem(14px);
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(20px);
+    margin: rem(40px) 0 rem(30px);
+  }
+  &__page-active {
+    border: 1px solid #d72a4e;
+    border-radius: rem(6px);
+    box-shadow: 0 rem(6px) rem(12px) rgba(0, 0, 0, 0.1);
+  }
+  &__page-item {
+    list-style: none;
+    cursor: pointer;
+    padding: rem(6px) rem(15px);
+  }
+  &__page-link {
+    font-size: rem(18px);
+    font-weight: 500;
+    color: #002c36;
+  }
+  &__page-dot {
+    list-style: none;
+    cursor: pointer;
+  }
+  &__page-dot-link {
+    font-size: rem(24px);
+    font-weight: 500;
+    color: #002c36;
+  }
+}

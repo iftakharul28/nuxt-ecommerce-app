@@ -1,0 +1,127 @@
+.login {
+  display: grid;
+  place-items: center;
+  min-height: calc(85vh - 60px);
+  min-width: 100%;
+  &__wrapper {
+    @include mq(medium) {
+      width: rem(450px);
+    }
+  }
+  &__image-wrapper {
+    @include mq(medium) {
+      margin: 0 auto;
+      position: relative;
+      padding-top: 55.25%;
+      height: 0;
+    }
+    @include mq(extra-large) {
+      padding-top: 65.25%;
+    }
+    @include mq(double-extra-large) {
+      padding-top: 75.25%;
+    }
+  }
+  &__image {
+    max-width: calc(100% - 80px);
+    max-height: 100%;
+    display: table;
+    margin: 0 auto;
+    @include mq(medium) {
+      position: absolute;
+      inset: 0;
+      object-fit: contain;
+    }
+  }
+  &__form {
+    max-width: calc(100% - 90px);
+    margin: rem(25px) auto 0;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  &__input-label {
+    display: none;
+  }
+  &__input {
+    -moz-appearance: textfield;
+    font-size: rem(16px);
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.4;
+    width: 100%;
+    padding: rem(6px) rem(12px);
+    border: 1px solid #d72a4e;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__otp-wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(6px);
+    width: calc(100% - 90px);
+    margin: 0 auto;
+  }
+  &__otp {
+    height: rem(35px) !important;
+    -moz-appearance: textfield;
+    font-size: rem(16px);
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.4;
+    width: 100%;
+    padding: rem(6px) rem(12px);
+    border: 1px solid #002c36;
+    &--active {
+      border: 1px solid #d72a4e;
+    }
+  }
+  &__button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 70px);
+    margin: rem(30px) auto 0;
+  }
+  &__button {
+    display: table;
+    cursor: pointer;
+    color: #fff;
+    border-radius: rem(5px);
+    border: none;
+    &--first {
+      margin: rem(20px) auto 0;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  &__resent {
+    display: table;
+    cursor: pointer;
+    font-size: rem(14px);
+    font-weight: 500;
+    padding: rem(8px) rem(30px);
+    color: #fff;
+    background-color: #d72a4e;
+    border-radius: rem(5px);
+    border: none;
+  }
+  &__icon {
+    width: rem(40px);
+    height: rem(40px);
+    padding: rem(5px);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: #d72a4e;
+    border-radius: 50%;
+    path {
+      stroke: #fff;
+    }
+  }
+}
