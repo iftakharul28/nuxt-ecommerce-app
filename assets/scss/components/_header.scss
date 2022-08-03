@@ -1,4 +1,13 @@
 .header {
+  grid-area: 1 / 1 / 2 / 13;
+  &--fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    z-index: 99;
+  }
   &__wrapper {
     display: flex;
     align-items: center;

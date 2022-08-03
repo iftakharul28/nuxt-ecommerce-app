@@ -16,6 +16,14 @@ body {
   position: relative;
   overflow-x: hidden !important;
 }
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  column-gap: rem(15px);
+  &__body {
+    grid-area: 2 / 2 / 3 / 13;
+  }
+}
 .body--fixed {
   overflow: hidden;
 }

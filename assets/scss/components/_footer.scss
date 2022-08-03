@@ -1,4 +1,5 @@
 .footer {
+  grid-area: 3 / 2 / 3 / 13;
   margin: rem(25px) 0 rem(62px);
   border-top: 3px solid #d72a4e;
   background-color: #fff;
@@ -15,13 +16,13 @@
   &__top-row {
     display: grid;
     grid-template-areas:
-      'localtion localtion'
-      'customer information'
-      'mobile-app mobile-app';
+      "localtion localtion"
+      "customer information"
+      "mobile-app mobile-app";
     gap: rem(30px);
     @include mq(medium-small) {
       display: grid;
-      grid-template-areas: 'localtion customer information mobile-app';
+      grid-template-areas: "localtion customer information mobile-app";
     }
   }
   &__details-wrapper {

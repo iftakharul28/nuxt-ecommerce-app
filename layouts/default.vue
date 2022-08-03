@@ -2,7 +2,8 @@
   <main class="main">
     <Header />
     <SideBar />
-    <Nuxt />
+    <div class="main__body"><Nuxt /></div>
+
     <Footer />
   </main>
 </template>
