@@ -16,6 +16,25 @@ body {
   position: relative;
   overflow-x: hidden !important;
 }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00dc82 #eee;
+}
+
+/* Works on Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00dc82;
+  // border-radius: 20px;
+}
+/* width */
+*::-webkit-scrollbar {
+  width: rem(12px);
+}
 .main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

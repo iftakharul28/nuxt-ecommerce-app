@@ -1,7 +1,7 @@
 .footer {
   grid-area: 3 / 2 / 3 / 13;
   margin: rem(25px) 0 rem(62px);
-  border-top: 3px solid #d72a4e;
+  border-top: 3px solid #00dc82;
   background-color: #fff;
   padding: rem(25px) rem(15px) rem(30px);
   @include mq(801px) {
@@ -55,9 +55,9 @@
     grid-area: localtion;
   }
   &__image-wrapper {
-    width: rem(180px);
+    width: rem(80px);
     @include mq(801px) {
-      width: rem(215px);
+      width: rem(120px);
     }
   }
   &__image {

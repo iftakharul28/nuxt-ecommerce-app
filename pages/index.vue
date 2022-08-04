@@ -15,7 +15,7 @@ export default {
   },
   async asyncData({ $axios }) {
     const products = await $axios.$get(
-      "https://api.escuelajs.co/api/v1/products"
+      "https://api.escuelajs.co/api/v1/products?offset=0&limit=40"
     );
     return { products };
   },
