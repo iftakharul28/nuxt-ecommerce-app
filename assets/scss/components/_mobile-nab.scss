@@ -8,7 +8,7 @@
   -moz-box-shadow: 6px -10px 5px 0px rgba(207, 199, 199, 0.25);
   z-index: 999;
   overflow-x: auto;
-  background-color: #d72a4e;
+  background-color: #00dc82;
   &__wrapper {
     overflow-x: scroll;
     display: flex;
@@ -34,18 +34,18 @@
   }
   &__image-wrapper {
     flex: 1;
+    background: #fff;
+    border-radius: rem(10px);
     @include mq(375px) {
       flex: 0;
     }
   }
   &__item-image {
     box-shadow: 0 rem(16px) rem(48px) rgba(0, 0, 0, 0.175) !important;
-    background: #fff;
-    border-radius: rem(10px);
     height: 100%;
     width: rem(40px);
     display: table;
-    margin: 0 auto;
+    padding: 3px;
     object-fit: contain;
     @include mq(380px) {
       height: rem(45px);

@@ -5,6 +5,14 @@
 import Products from "../components/Products.vue";
 export default {
   layout: "Index",
+  head() {
+    return {
+      title: "Home Page",
+      meta: [
+        { hid: "description", name: "Home Page Description", content: "" },
+      ],
+    };
+  },
   data() {
     return {
       products: [],

@@ -1,11 +1,10 @@
 .footer {
-  grid-area: 3 / 2 / 3 / 13;
-  margin: rem(25px) 0 rem(62px);
+  margin: 0 0 rem(62px);
   border-top: 3px solid #00dc82;
   background-color: #fff;
   padding: rem(25px) rem(15px) rem(30px);
   @include mq(801px) {
-    margin: rem(35px) 0 0;
+    grid-column: 2 / -2;
   }
   .container {
     max-width: 100%;

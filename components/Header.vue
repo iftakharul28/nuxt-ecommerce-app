@@ -24,29 +24,16 @@ export default {
   name: "Header",
   data() {
     return {
-      limitPosition: 100,
       scrolled: false,
-      lastPosition: 0,
     };
   },
   methods: {
     handleScroll() {
-      if (
-        this.lastPosition < window.scrollY &&
-        this.limitPosition < window.scrollY
-      ) {
+      if (window.scrollY >= 5) {
         this.scrolled = true;
-        // move up!
+      } else {
+        this.scrolled = false;
       }
-
-      if (this.lastPosition > window.scrollY) {
-        this.scrolled = true;
-        // this.scrolled = false;
-        // move down
-      }
-
-      this.lastPosition = window.scrollY;
-      // this.scrolled = window.scrollY > 250;
     },
   },
   beforeMount() {

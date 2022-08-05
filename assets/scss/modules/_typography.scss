@@ -36,11 +36,15 @@ body {
   width: rem(12px);
 }
 .main {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  column-gap: rem(15px);
+  @include mq(801px) {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    column-gap: rem(15px);
+  }
   &__body {
-    grid-area: 2 / 2 / 3 / 13;
+    @include mq(801px) {
+      grid-column: 2/-1;
+    }
   }
 }
 .body--fixed {

@@ -34,10 +34,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: #fff;
-    padding: rem(20px) rem(12px);
     @include mq(801px) {
       grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
-      padding: rem(30px) rem(15px) rem(45px);
     }
   }
   &__search-wrapper {
