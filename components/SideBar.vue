@@ -1,5 +1,5 @@
 <template>
-  <div class="side-bar">
+  <div class="side-bar" @click="store.sideBar = false">
     <div class="side-bar__wrapper">
       <div class="side-bar__contents">
         <div class="side-bar__item-wrapper">
@@ -490,7 +490,13 @@
   </div>
 </template>
 <script>
+import { store } from "../store/store.js";
 export default {
   name: "SideBar",
+  data() {
+    return {
+      store,
+    };
+  },
 };
 </script>

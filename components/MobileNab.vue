@@ -2,7 +2,10 @@
   <nav class="mobile-nab">
     <div class="container">
       <div class="mobile-nab__wrapper">
-        <div class="mobile-nab__item-wrapper">
+        <div
+          class="mobile-nab__item-wrapper"
+          @click="store.sideBar = !store.sideBar"
+        >
           <svg
             stroke="currentColor"
             fill="currentColor"
@@ -91,3 +94,13 @@
     </div>
   </nav>
 </template>
+<script>
+import { store } from "../store/store.js";
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+};
+</script>
