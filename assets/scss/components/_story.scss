@@ -8,8 +8,10 @@
       margin: 0 auto;
     }
     &:hover {
-      .story__cards-icon {
-        display: block;
+      @include mq(medium) {
+        .story__cards-icon {
+          display: block;
+        }
       }
     }
   }
@@ -29,7 +31,7 @@
     padding-top: 110%;
     height: 0;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       inset: 0;
       background-color: rgba(0, 0, 0, 0.25);
@@ -58,7 +60,7 @@
       top: 50%;
       transform: translateY(-50%);
       z-index: 9;
-      background-color: #d72a4e;
+      background-color: #00dc82;
       color: #fff;
       border-radius: rem(10px);
       cursor: pointer;

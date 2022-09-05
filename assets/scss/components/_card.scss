@@ -1,27 +1,29 @@
 .card {
   border: 1px solid rgb(238, 238, 238);
-  overflow-x: hidden;
-  cursor: pointer;
   position: relative;
+  overflow: hidden;
   &__top-sell {
     position: absolute;
     top: rem(12px);
     left: rem(12px);
-    font-size: rem(15px);
-    font-weight: 500;
+    font-size: rem(14px);
+    font-weight: 600;
     padding: rem(5px) rem(7px);
     color: #fff;
-    background-color: #d72a4e;
+    background-color: #00dc82;
     border-top-right-radius: rem(7px);
     border-bottom-right-radius: rem(7px);
     z-index: 9;
   }
   &__main {
-    display: flex;
-    flex-direction: column;
     padding: rem(8px) rem(4px);
     height: 100%;
     width: 100%;
+    display: block;
+    @include mq(801px) {
+      display: flex;
+      flex-direction: column;
+    }
     @include mq(double-extra-large) {
       padding: rem(12px);
     }
@@ -45,7 +47,7 @@
       &:hover {
         transform: scale(0.98);
         transition: all 0.2s ease;
-        background-color: rgba(1, 17, 51, 0.10980392156862745);
+        background-color: rgba(1, 17, 51, 0.1);
       }
     }
   }
@@ -86,12 +88,12 @@
       width: max-content;
       &::before {
         position: absolute;
-        content: '';
-        height: 2px;
+        content: "";
+        height: rem(2px);
         width: 100%;
         top: 50%;
         transform: translateY(-50%);
-        background-color: #d72a4e;
+        background-color: #00dc82;
       }
     }
   }
@@ -114,7 +116,7 @@
     font-weight: 500;
     padding: rem(2px) rem(4px);
     border-radius: rem(4px);
-    background-color: #d72a4e;
+    background-color: #00dc82;
     color: #fff;
   }
   &__contents-sold {

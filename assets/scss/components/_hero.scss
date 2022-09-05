@@ -1,23 +1,23 @@
 .hero {
   &__wrapper {
-    box-shadow: 4px 11px 5px 0px rgba(207, 199, 199, 0.44);
-    -webkit-box-shadow: 4px 11px 5px 0px rgba(207, 199, 199, 0.44);
-    -moz-box-shadow: 4px 11px 5px 0px rgba(207, 199, 199, 0.44);
-    @include mq(1401px) {
+    @include mq(801px) {
+      box-shadow: 4px 11px 5px 0px rgba(207, 199, 199, 0.44);
+    }
+    @include mq(1281px) {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: rem(15px);
     }
   }
   &__banner {
-    @include mq(1401px) {
+    @include mq(1281px) {
       grid-column: 1 / 9;
     }
     overflow: hidden;
     position: relative;
   }
   &__Story {
-    @include mq(1400px) {
+    @include mq(1281px) {
       grid-column: 9 / -1;
     }
     overflow: hidden;

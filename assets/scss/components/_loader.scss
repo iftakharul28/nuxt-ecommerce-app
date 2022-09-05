@@ -2,21 +2,20 @@
   &__dual-ring {
     display: grid;
     place-items: center;
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100vh;
-    background-color: rgba(#0a192f, 0.85);
   }
   &__dual-ring-wrapper {
     display: inline-block;
     &:after {
-      content: ' ';
+      content: " ";
       display: block;
       width: rem(90px);
       height: rem(90px);
       margin: 8px;
       border-radius: 50%;
-      border: 6px solid #d72a4e;
-      border-color: #d72a4e transparent #d72a4e transparent;
+      border: 6px solid #00dc82;
+      border-color: #00dc82 transparent #00dc82 transparent;
       animation: lds-dual-ring 1.2s linear infinite;
       @include mq(medium-large) {
         width: rem(120px);
@@ -53,7 +52,7 @@
   }
   &__thumb {
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     height: 100%;
     &--secondery {
@@ -149,5 +148,12 @@
     @include mq(801px) {
       grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
     }
+  }
+  &__image-lists-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: rem(6px);
+    margin-top: rem(20px);
   }
 }

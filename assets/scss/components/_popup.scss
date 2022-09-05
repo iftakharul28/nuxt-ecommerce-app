@@ -3,37 +3,32 @@
   height: 100vh;
   position: fixed;
   inset: 0;
-  z-index: 99999;
+  z-index: 999;
   display: grid;
   place-items: center;
   background-color: rgba(#0a192f, 0.85);
-  &__container {
+  &__wrapper {
     width: calc(100% - 20px);
+    border-radius: rem(6px);
     @include mq(801px) {
-      width: 740px;
+      width: rem(740px);
     }
     @include mq(double-extra-large) {
-      width: 1270px;
-      height: 720px;
+      width: rem(1270px);
     }
   }
-  &__close {
-    color: $primary_icon;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
-  }
-  &__video {
+  &__container {
     text-align: center;
     padding-bottom: 56.25%;
     position: relative;
     height: 0;
+  }
+  &__video {
+    position: absolute;
+    inset: 0;
+    height: 100% !important;
+    width: 100% !important;
     iframe {
-      position: absolute;
-      inset: 0;
-      height: 100%;
-      width: 100%;
       border-radius: rem(6px);
     }
   }

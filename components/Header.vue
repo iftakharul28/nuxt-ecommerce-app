@@ -7,7 +7,7 @@
     <div class="container">
       <div class="header__wrapper">
         <div class="header__logo-wrapper">
-          <img class="header__logo" src="favicon.ico" alt="site logo" />
+          <img class="header__logo" src="~/static/icon.png" alt="site logo" />
         </div>
         <div class="header__link-wrapper">
           <NuxtLink class="header__link" to="/">Home</NuxtLink>

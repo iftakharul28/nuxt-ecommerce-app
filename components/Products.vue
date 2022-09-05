@@ -7,7 +7,7 @@
       :key="product.id"
       v-bind:id="product.id"
     >
-      <div class="card__main">
+      <NuxtLink class="card__main" :to="'products/' + product.id">
         <div class="card__image-wrapper">
           <img
             class="card__image"
@@ -22,7 +22,7 @@
             <p class="card__contents-sold">sold {{ product.id }}</p>
           </div>
         </div>
-      </div>
+      </NuxtLink>
     </article>
   </div>
 </template>

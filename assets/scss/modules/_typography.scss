@@ -16,39 +16,26 @@ body {
   position: relative;
   overflow-x: hidden !important;
 }
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #00dc82 #eee;
-}
-
-/* Works on Chrome, Edge, and Safari */
-
-*::-webkit-scrollbar-track {
-  background: #eee;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #00dc82;
-  // border-radius: 20px;
-}
-/* width */
-*::-webkit-scrollbar {
-  width: rem(12px);
+.body--fixed {
+  overflow: hidden;
 }
 .main {
+  background-color: #dcdceabc;
+  position: relative;
+  padding-top: rem(65px);
   @include mq(801px) {
     display: grid;
     grid-template-columns: 240px 1fr;
-    column-gap: rem(15px);
+    padding-top: rem(75px);
   }
   &__body {
+    min-width: 100%;
+    padding: rem(10px) rem(8px);
     @include mq(801px) {
+      padding: rem(15px) rem(15px) 0 rem(15px);
       grid-column: 2/-1;
     }
   }
-}
-.body--fixed {
-  overflow: hidden;
 }
 a {
   text-decoration: none;

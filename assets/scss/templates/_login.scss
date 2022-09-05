@@ -53,7 +53,7 @@
     line-height: 1.4;
     width: 100%;
     padding: rem(6px) rem(12px);
-    border: 1px solid #d72a4e;
+    border: 1px solid #00dc82;
     &:focus {
       outline: none;
     }
@@ -76,7 +76,7 @@
     padding: rem(6px) rem(12px);
     border: 1px solid #002c36;
     &--active {
-      border: 1px solid #d72a4e;
+      border: 1px solid #00dc82;
     }
   }
   &__button-wrapper {
@@ -106,7 +106,7 @@
     font-weight: 500;
     padding: rem(8px) rem(30px);
     color: #fff;
-    background-color: #d72a4e;
+    background-color: #00dc82;
     border-radius: rem(5px);
     border: none;
   }
@@ -118,7 +118,7 @@
     place-items: center;
     cursor: pointer;
     margin: 0 auto;
-    background-color: #d72a4e;
+    background-color: #00dc82;
     border-radius: 50%;
     path {
       stroke: #fff;

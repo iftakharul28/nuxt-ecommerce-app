@@ -1,10 +1,11 @@
 .footer {
-  margin: 0 0 rem(62px);
+  margin: rem(25px) 0 rem(62px);
   border-top: 3px solid #00dc82;
   background-color: #fff;
   padding: rem(25px) rem(15px) rem(30px);
   @include mq(801px) {
-    grid-column: 2 / -2;
+    margin: rem(15px) rem(15px) 0 rem(15px);
+    grid-column: 2/-2;
   }
   .container {
     max-width: 100%;
@@ -42,10 +43,13 @@
     color: #002c36;
   }
   &__details-text {
-    font-size: rem(14px);
+    font-size: rem(13px);
     font-weight: 600;
     color: #002c36;
-    margin-top: rem(10px);
+    margin: rem(10px) rem(8px) 0 rem(16px);
+    @include mq(801px) {
+      margin: rem(10px) 0 0 rem(16px);
+    }
     &:hover {
       color: #002c36;
     }
@@ -54,9 +58,9 @@
     grid-area: localtion;
   }
   &__image-wrapper {
-    width: rem(80px);
+    width: rem(180px);
     @include mq(801px) {
-      width: rem(120px);
+      width: rem(215px);
     }
   }
   &__image {

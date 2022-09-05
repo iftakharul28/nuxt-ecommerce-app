@@ -43,6 +43,8 @@ export default {
     const category = await $axios.$get(
       "https://api.escuelajs.co/api/v1/categories"
     );
+    console.log(category);
+
     return { category };
   },
 };

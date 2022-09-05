@@ -86,11 +86,17 @@ $breakpoints: (
   'components/side-bar',
   'components/popup',
   'components/top-category',
-  'components/card';
+  'components/card',
+  'components/hot-deals',
+  "components/cart-header",
+  "components/dropdown";
 // 3. templates
 @import 
   'templates/home',
   'templates/products',
   'templates/product-single',
   'templates/login',
-  'templates/error-page';
+  'templates/error-page',
+  'templates/checkout',
+  'templates/cart',
+  'templates/payment';
