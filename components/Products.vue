@@ -7,7 +7,7 @@
       :key="product.id"
       v-bind:id="product.id"
     >
-      <NuxtLink class="card__main" :to="'products/' + product.id">
+      <NuxtLink class="card__main" :to="`/products/${product.id}`">
         <div class="card__image-wrapper">
           <img
             class="card__image"

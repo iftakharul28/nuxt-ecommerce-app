@@ -52,11 +52,23 @@
             </div>
           </div>
         </div>
+        <div v-if="mobile" class="product-single__side-wrapper">
+          <h2 class="product-single__subheading">More Products</h2>
+          <div class="product-single__side-cards">
+            <Products :products="products" />
+          </div>
+        </div>
+      </div>
+      <div v-if="!mobile" class="product-single__side-wrapper">
+        <div class="product-single__side-cards">
+          <Products :products="products" />
+        </div>
       </div>
     </div>
   </section>
 </template>
 <script>
+import Products from "../../components/Products.vue";
 export default {
   layout: "Products Single",
   head() {
@@ -74,15 +86,37 @@ export default {
   data() {
     return {
       product: {},
+      products: [],
+      mobile: false,
     };
+  },
+  components: {
+    Products,
+  },
+  methods: {
+    onResize() {
+      this.mobile = window.innerWidth <= 800;
+    },
+  },
+  beforeDestroy() {
+    if (typeof window !== "undefined") {
+      window.removeEventListener("resize", this.onResize, { passive: true });
+    }
+  },
+  mounted() {
+    this.onResize();
+    window.addEventListener("resize", this.onResize, { passive: true });
   },
   async asyncData({ params, $axios }) {
     const product = await $axios.$get(
       `https://api.escuelajs.co/api/v1/products/${params.id}`
     );
-    console.log(product);
 
-    return { product };
+    const products = await $axios.$get(
+      "https://api.escuelajs.co/api/v1/products?offset=30&limit=60"
+    );
+
+    return { product, products };
   },
 };
 </script>
